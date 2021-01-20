@@ -1,5 +1,5 @@
 import 'package:delivery/modules/restaurants/domain/entities/restaurant.dart';
-import 'package:delivery/modules/restaurants/domain/repositories/get_restaurants_repositories.dart';
+import 'package:delivery/modules/restaurants/domain/repositories/get_restaurants_repository.dart';
 import 'package:delivery/modules/restaurants/domain/usecase/get_restaurants_usecase.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';

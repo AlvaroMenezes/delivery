@@ -1,5 +1,5 @@
 import 'package:delivery/modules/restaurants/domain/entities/restaurant.dart';
-import 'package:delivery/modules/restaurants/domain/repositories/get_restaurants_repositories.dart';
+import 'package:delivery/modules/restaurants/domain/repositories/get_restaurants_repository.dart';
 
 abstract class GetRestaurantsUseCase {
   Future<List<Restaurant>> call();
