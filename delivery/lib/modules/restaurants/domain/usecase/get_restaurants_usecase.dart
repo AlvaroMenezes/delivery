@@ -5,7 +5,7 @@ abstract class GetRestaurantsUseCase {
   Future<List<Restaurant>> call();
 }
 
-class GradesListUseCaseImpl implements GetRestaurantsUseCase {
+class GetRestaurantsUseCaseImpl implements GetRestaurantsUseCase {
   @override
   Future<List<Restaurant>> call() {
     // TODO: implement call
