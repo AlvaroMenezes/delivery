@@ -12,8 +12,8 @@ class RestaurantsListBloc {
   var restaurants = [];
 
    onLoadRestaurants() async {
-    var list = usecase();
-    restaurants.add(list);
+    var list = await usecase();
+    restaurants.addAll(list);
     _controller.sink.add(true);
   }
 

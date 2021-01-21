@@ -19,7 +19,8 @@ main() {
     dio.httpClientAdapter = adapterMock;
     dataSource = GetRestaurantsDataSource(dio);
 
-    response = [
+    response =
+    {"data":[
       {
         "name": "A",
         "logo": "B",
@@ -43,7 +44,7 @@ main() {
         "description": "I",
         "price": "J",
       }
-    ];
+    ]};
   });
 
   group('GetRestaurantsDataSource', () {

@@ -7,7 +7,7 @@ import 'package:delivery/modules/restaurants/data/model/restaurant_model.dart';
 import 'package:dio/dio.dart';
 
 class GetRestaurantsDataSource implements DataSource {
-  final String _webService = "5ea863122d00003b4a3a3f73";
+  final String _webService = "7898494f-5a2e-454d-94f1-aaa0f70020ca";
   final Dio _dio;
   GetRestaurantsDataSource(this._dio);
 
@@ -17,17 +17,16 @@ class GetRestaurantsDataSource implements DataSource {
 
     try {
       var response = await _dio.get(url);
-      print(response);
 
-      var _json = json.decode(response.data);
+      var _json = json.decode(json.encode(response.data));
 
       var list = List<RestaurantModel>.from(
-          (_json as List).map((i) => fromJson(i)).toList());
+          (_json['data'] as List).map((i) => fromJson(i)).toList());
 
       return list;
     } on DioError catch (e) {
-      throw GetRestaurantsDataSourceException(
-          '${e.response.statusCode}', e.response.data.toString());
+      print(e.message);
+      throw GetRestaurantsDataSourceException(' ', e.message);
     }
   }
 }

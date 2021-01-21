@@ -9,7 +9,7 @@ class GetRestaurantsRepositoryImpl implements GetRestaurantsRepository {
   GetRestaurantsRepositoryImpl(this._dataSource);
 
   @override
-  Future<List<Restaurant>> call() {
-    return _dataSource((json) => RestaurantModel.fromJson(json));
+  Future<List<Restaurant>> call() async {
+    return await _dataSource((json) => RestaurantModel.fromJson(json));
   }
 }

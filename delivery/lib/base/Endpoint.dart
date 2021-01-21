@@ -1,3 +1,4 @@
 class EndPoint {
-  static final String URL = " http://www.mocky.io/v2/";
+  static final String URL = "https://run.mocky.io/v3/";
+
 }

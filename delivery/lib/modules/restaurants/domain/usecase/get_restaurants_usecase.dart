@@ -11,5 +11,5 @@ class GetRestaurantsUseCaseImpl implements GetRestaurantsUseCase {
   GetRestaurantsUseCaseImpl(this.repository);
 
   @override
-  Future<List<Restaurant>> call() async => repository();
+  Future<List<Restaurant>> call() async => await repository();
 }
