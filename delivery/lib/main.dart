@@ -1,11 +1,17 @@
+import 'package:delivery/modules/restaurants/presenter/ui/restaurants_list.dart';
 import 'package:flutter/material.dart';
 
+import 'di/injection.dart';
+
 void main() {
+  setupDependenceInjection();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: RestaurantList()//MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }

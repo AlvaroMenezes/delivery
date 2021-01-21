@@ -1,12 +1,13 @@
+import 'package:delivery/modules/restaurants/data/model/exception/restaurant_model_exception.dart';
 import 'package:delivery/modules/restaurants/data/model/restaurant_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   var response;
+  var map;
   RestaurantModel restaurantModel;
 
   setUp(() async {
-
     response = {
       "name": "A",
       "logo": "B",
@@ -19,13 +20,16 @@ void main() {
       "description": "I",
       "price": "J",
     };
-
-    //restaurantModel = RestaurantModel.fromJson(response);
   });
 
   group('RestaurantModel Json Parser', () {
-    test('[ RestaurantModel ] should be parsed', () {
+    test('parse should fail and throw RestaurantModelParseException ', () {
+      expect(() => RestaurantModel.fromJson(null),
+          throwsA(isA<RestaurantModelParseException>()));
+    });
 
+    test('[ RestaurantModel ] should be parsed', () {
+      restaurantModel = RestaurantModel.fromJson(response);
       expect(restaurantModel, isA<RestaurantModel>());
     });
 
@@ -66,13 +70,14 @@ void main() {
     });
   });
 
-
-
-
   group('RestaurantModel to map test', () {
-    //restaurantModel = RestaurantModel.fromJson(response);
+    test('should parse to map', () {
+      restaurantModel = RestaurantModel.fromJson(response);
 
-    var map = restaurantModel.toMap();
+      map = restaurantModel.toMap();
+      expect(map, isA<Map>());
+    });
+
     test('name should be [A] ', () {
       expect(map['name'], 'A');
     });
@@ -109,7 +114,4 @@ void main() {
       expect(map['price'], 'J');
     });
   });
-
-
-
 }

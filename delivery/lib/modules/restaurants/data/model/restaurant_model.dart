@@ -24,7 +24,7 @@ class RestaurantModel extends Restaurant implements BaseModel {
 
       return model;
     } catch (e) {
-      throw RestaurantModelParseException(e.toString());
+      throw RestaurantModelParseException('RestaurantModelParseException: ${e.toString()}');
     }
   }
 
