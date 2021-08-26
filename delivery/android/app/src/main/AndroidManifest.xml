@@ -1,6 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.alvaromenezes.delivery">
-    <uses-permission android:name="android.permission.INTERNET" />
+    package="com.example.delivery">
    <application
         android:label="delivery"
         android:icon="@mipmap/ic_launcher">

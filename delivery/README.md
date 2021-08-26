@@ -1,6 +1,6 @@
 # delivery
 
-Delivery demo
+A new Flutter project.
 
 ## Getting Started
 
