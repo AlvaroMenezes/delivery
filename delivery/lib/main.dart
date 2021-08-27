@@ -16,6 +16,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: RestaurantList());
+        home: RestaurantList(key: Key('LIST-PAGE')));
   }
 }

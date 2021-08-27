@@ -10,6 +10,7 @@ import 'package:get_it/get_it.dart';
 enum MenuItem { SAIR, SOBRE }
 
 class RestaurantList extends StatefulWidget {
+  const RestaurantList({Key? key}) : super(key: key);
   @override
   _RestaurantListState createState() => _RestaurantListState();
 }
@@ -53,17 +54,18 @@ class _RestaurantListState extends State<RestaurantList> {
                   Restaurant _restaurant =
                       _bloc.restaurants.elementAt(position);
 
-                  return getCard(_restaurant);
+                  return getCard(_restaurant, position);
                 });
           }),
     );
   }
 
-  Widget getCard(Restaurant restaurant) {
+  Widget getCard(Restaurant restaurant, int position) {
     const titleTextColor = const Color(0xFF090909);
     const descriptionTextColor = const Color(0xFF616161);
 
     return InkWell(
+      key: Key('CARD-ITEM-$position'),
       onTap: () => _onRestaurantDetail(restaurant),
       child: Card(
         color: Colors.grey[80],
@@ -76,11 +78,23 @@ class _RestaurantListState extends State<RestaurantList> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   FadeInImage.assetNetwork(
-                    placeholder: 'assets/placeholder.png',
-                    image: restaurant.logo,
-                    height: 64,
-                    width: 64,
-                  ),
+                      key: Key('THUMB-LOGO'),
+                      placeholder: 'assets/placeholder.png',
+                      image: restaurant.logo,
+                      height: 64,
+                      width: 64,
+                      placeholderErrorBuilder: (BuildContext context,
+                          Object exception, StackTrace? stackTrace) {
+                        return Image(
+                            image: AssetImage('assets/placeholder.png'),
+                            height: 256);
+                      },
+                      imageErrorBuilder: (BuildContext context,
+                          Object exception, StackTrace? stackTrace) {
+                        return Image(
+                            image: AssetImage('assets/placeholder.png'),
+                            height: 256);
+                      }),
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.only(top: 8.0, left: 16),
@@ -89,6 +103,7 @@ class _RestaurantListState extends State<RestaurantList> {
                         children: <Widget>[
                           Text(
                             restaurant.name,
+                            key: Key('NAME'),
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
@@ -97,6 +112,7 @@ class _RestaurantListState extends State<RestaurantList> {
                           ),
                           Text(
                             restaurant.cousine,
+                            key: Key('COUSINE'),
                             style: TextStyle(
                                 fontStyle: FontStyle.italic,
                                 fontSize: 14,
@@ -104,6 +120,7 @@ class _RestaurantListState extends State<RestaurantList> {
                           ),
                           Text(
                             restaurant.score,
+                            key: Key('SCORE'),
                             style: TextStyle(
                                 color: _colorFromHex(restaurant.colorScore)),
                           ),
