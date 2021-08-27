@@ -46,10 +46,15 @@ class _RestaurantDetailState extends State<RestaurantDetail> {
                     color: descriptionTextColor),
               ),
               FadeInImage.assetNetwork(
-                placeholder: 'assets/loader.gif',
-                image: widget.restaurant.photoPlate,
-                height: 256,
-              ),
+                  placeholder: 'assets/loader.gif',
+                  image: widget.restaurant.photoPlate,
+                  height: 256,
+                  imageErrorBuilder: (BuildContext context, Object exception,
+                      StackTrace? stackTrace) {
+                    return Image(
+                        image: AssetImage('assets/placeholder.png'),
+                        height: 256);
+                  }),
               Text(
                 widget.restaurant.plateName,
                 style: TextStyle(

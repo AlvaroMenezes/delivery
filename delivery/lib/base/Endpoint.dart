@@ -1,3 +1,3 @@
 class EndPoint {
-  static final String URL = "https://run.mocky.io/v3/";
+  static const String URL = "https://run.mocky.io/v3/";
 }

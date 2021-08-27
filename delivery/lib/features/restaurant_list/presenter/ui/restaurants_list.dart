@@ -1,3 +1,4 @@
+import 'package:delivery/features/restaurant_detail/restaurat_detail.dart';
 import 'package:delivery/features/restaurant_list/domain/entities/restaurant.dart';
 import 'package:delivery/features/restaurant_list/presenter/bloc/restaurants_list_bloc.dart';
 import 'package:flutter/cupertino.dart';
@@ -142,13 +143,16 @@ class _RestaurantListState extends State<RestaurantList> {
   }
 
   _onRestaurantDetail(Restaurant restaurant) {
-    // Navigator.push(
-    //   context,
-    //   MaterialPageRoute(
-    //     builder: (context) {
-    //       return RestaurantDetail(restaurant: restaurant);
-    //     },
-    //   ),
-    // );
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) {
+          return RestaurantDetail(
+            restaurant: restaurant,
+            key: Key('DETAIL-PAGE'),
+          );
+        },
+      ),
+    );
   }
 }
