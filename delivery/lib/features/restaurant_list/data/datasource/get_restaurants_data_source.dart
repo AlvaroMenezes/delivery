@@ -12,16 +12,15 @@ class GetRestaurantsDataSource implements DataSource {
   GetRestaurantsDataSource(this._dio);
 
   @override
-  Future call(FromJson fromJson) async {
+  Future call(FromJson? fromJson) async {
     String url = '${EndPoint.URL}$_webService';
 
     try {
-      var response = await _dio.get(url);
-
-      var _json = json.decode(json.encode(response.data));
+      var response = await _dio.get<String>(url);
+      Map _json = json.decode(response.data!);
 
       var list = List<RestaurantModel>.from(
-          (_json['data'] as List).map((i) => fromJson(i)).toList());
+          (_json['data'] as List).map((i) => fromJson!(i)).toList());
 
       return list;
     } on DioError catch (e) {

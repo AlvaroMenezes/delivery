@@ -1,5 +1,4 @@
 import 'package:delivery/base/base_model.dart';
-import 'package:delivery/features/restaurant_list/data/model/exception/restaurant_model_exception.dart';
 import 'package:delivery/features/restaurant_list/domain/entities/restaurant.dart';
 
 class RestaurantModel extends Restaurant implements BaseModel {
@@ -9,24 +8,19 @@ class RestaurantModel extends Restaurant implements BaseModel {
             plateName, description, price);
 
   factory RestaurantModel.fromJson(Map json) {
-    try {
-      RestaurantModel model = RestaurantModel(
-          json['name'] ?? '',
-          json['logo'] ?? '',
-          json['score'] ?? '',
-          json['colorScore'] ?? '',
-          json['delivery'] ?? '',
-          json['cousine'] ?? '',
-          json['photoPlate'] ?? '',
-          json['plateName'] ?? '',
-          json['description'] ?? '',
-          json['price'] ?? '');
+    RestaurantModel model = RestaurantModel(
+        json['name'] ?? '',
+        json['logo'] ?? '',
+        json['score'] ?? '',
+        json['colorScore'] ?? '',
+        json['delivery'] ?? '',
+        json['cousine'] ?? '',
+        json['photoPlate'] ?? '',
+        json['plateName'] ?? '',
+        json['description'] ?? '',
+        json['price'] ?? '');
 
-      return model;
-    } catch (e) {
-      throw RestaurantModelParseException(
-          'RestaurantModelParseException: ${e.toString()}');
-    }
+    return model;
   }
 
   @override
