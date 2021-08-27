@@ -1,0 +1,107 @@
+{
+      "data": [
+        {
+          "nome": "Hector's Bistro",
+          "logo":
+              "http://degustantigua.com/images/stories/clients/hector/logo-large.png",
+          "nota": "4.4",
+          "corNota": "#66cc00",
+          "entrega": "gratis",
+          "tipo": "Culinaria Francesa",
+          "logoPrato":
+              "https://allmundifood.files.wordpress.com/2014/11/escargot.jpg",
+          "nomePrato": "Escargot Paris",
+          "descricao":
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "preco": "RS 130,00"
+        },
+        {
+          "nome": "La Fusteria",
+          "logo":
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfZPnetuEU70BxgWkHxnq2alchDSI_tcqU8KA5yiasegQn64n2",
+          "nota": "4.3",
+          "corNota": "#66cc00",
+          "entrega": "gratis",
+          "tipo": "Culinaria italiana",
+          "logoPrato":
+              "https://i.pinimg.com/originals/e3/6e/78/e36e78ddb569aff6831d2fbdedd7c1fb.jpg",
+          "nomePrato": "Tomato Bruscheta",
+          "descricao":
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "preco": "RS 18,00"
+        },
+        {
+          "nome": "Bem Goiano",
+          "logo":
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT34qnEQpQsjyMQzIUoqzDVdE7T_Utts_ImvVNDTf7GvKXMaQZ-HA",
+          "nota": "3.3",
+          "corNota": "#FF7F00",
+          "entrega": "gratis",
+          "tipo": "Comida Tipica Brasileira",
+          "logoPrato":
+              "http://3.bp.blogspot.com/__eBHOphs6J8/TKpgBVZvIYI/AAAAAAAAAAQ/5ZiO6EKaBAc/s1600/Arroz-com-pequi_01jpg.jpg",
+          "nomePrato": "Arroz com Pequi",
+          "descricao":
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "preco": "RS 25,90"
+        },
+        {
+          "nome": "Mexico",
+          "logo":
+              "https://images.vexels.com/media/users/3/78279/list/cddfc15192d55a1b287432bdfeb3195a-logo-restaurante-mexicano.jpg",
+          "nota": "1.3",
+          "corNota": "#FF6666",
+          "entrega": "RS 5,00",
+          "tipo": "Comida Mexicana",
+          "logoPrato":
+              "https://img.stpu.com.br/?img=https://s3.amazonaws.com/pu-mgr/default/a0R0f00000wvktFEAQ/5a09cd78e4b03538292aead4.jpg&w=620&h=400",
+          "nomePrato": "Tacos con Tortillas ",
+          "descricao":
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "preco": "RS 78,90"
+        },
+        {
+          "nome": "Churrascaria Gaucho",
+          "logo": "https://tonolucro.delivery/images/empresa/591183314a297.jpg",
+          "nota": "4.9",
+          "corNota": "#66cc00",
+          "entrega": "RS 5,00",
+          "tipo": "Comida Tipica Gaucha",
+          "logoPrato":
+              "https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia7011/churrasco-cursos-cpt.jpg",
+          "nomePrato": "Espeto Corrido",
+          "descricao":
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "preco": "RS 39,90"
+        },
+        {
+          "nome": "Kazaki Sushi Bar",
+          "logo": "http://kazakisushi.com.br/wp-content/uploads/2020/03/kazaki-sushi-logotipo-2020-ok.png",
+          "nota": "3.9",
+          "corNota": "#FF7F00",
+          "entrega": "RS 8,00",
+          "tipo": "Culinaria Japonesa",
+          "logoPrato":
+              "https://img.stpu.com.br/?img=https://s3.amazonaws.com/pu-mgr/default/a0R0f00000w1T2GEAU/593af166e4b06e1b795bf163.jpg&w=620&h=400",
+          "nomePrato": "Buffet de Sushi livre",
+          "descricao":
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "preco": "RS 39,90"
+        },
+        {
+          "nome": "Pizzaria Mamma Italia",
+          "logo":
+              "https://mammaitaliarestaurantepizzaria.files.wordpress.com/2013/01/avatarmamma.jpg",
+          "nota": "4.9",
+          "corNota": "#66cc00",
+          "entrega": "Gratis",
+          "tipo": "Pizzaria",
+          "logoPrato":
+              "https://i0.wp.com/www.spveg.com/blog/wp-content/uploads/2017/08/VILLA-ROMA-PIZZA-34.jpg?resize=700%2C466",
+          "nomePrato": "Rodizio de Pizza",
+          "descricao":
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "preco": "RS 39,90"
+        }
+      ]
+    }
